@@ -1,60 +1,64 @@
 #!/bin/bash
-
 set -e
 
-# Check for root
-if [ "$EUID" -ne 0 ]; then
-  echo "Please run as root: sudo $0"
-  exit 1
-fi
+LOGFILE="$HOME/debian-postinstall.log"
+exec > >(tee -a "$LOGFILE") 2>&1
 
-# Check for active WiFi connection
-echo "Checking WiFi connectivity..."
-if ! ping -c 1 debian.org &>/dev/null; then
-  echo "No internet connection detected. Connect to WiFi and try again."
-  exit 1
-fi
-echo "WiFi is connected."
+echo "=== Post-installatie Debian Cinnamon ==="
 
-# Install basic packages
-echo "Installing flatpak, curl, and ufw..."
-apt update
-apt install -y flatpak gnome-software-plugin-flatpak curl ufw
+# Locale en tijdzone
+echo ">>> Locale en tijdzone instellen..."
+sudo locale-gen nl_NL.UTF-8
+sudo update-locale LANG=nl_NL.UTF-8
+sudo timedatectl set-timezone Europe/Amsterdam
 
-# Enable Flathub
-echo "Setting up Flathub..."
+# Updates
+echo ">>> APT updates uitvoeren..."
+sudo apt update && sudo apt -y upgrade
+
+# Firewall instellen
+echo ">>> Firewall instellen (ufw)..."
+sudo apt install -y ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
+sudo ufw logging on
+
+# Flatpak installeren
+echo ">>> Flatpak installeren..."
+sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install Chrome, Brave, LibreOffice
-echo "Installing apps via Flatpak..."
-flatpak install -y flathub com.google.Chrome
+# Flatpak apps installeren
+echo ">>> Brave, Chromium en LibreOffice installeren via Flatpak..."
 flatpak install -y flathub com.brave.Browser
+flatpak install -y flathub org.chromium.Chromium
 flatpak install -y flathub org.libreoffice.LibreOffice
 
-# Setup Firewall
-echo "Enabling UFW..."
-ufw default deny incoming
-ufw default allow outgoing
-ufw --force enable
+# Automatische Flatpak updates instellen via systemd
+echo ">>> Flatpak automatische updates instellen..."
+sudo tee /etc/systemd/system/flatpak-update.service >/dev/null <<EOF
+[Unit]
+Description=Flatpak update uitvoeren
 
-# Enable automatic APT updates
-echo "Setting up automatic APT updates..."
-apt install -y unattended-upgrades
-dpkg-reconfigure -plow unattended-upgrades
-
-# Enable automatic Flatpak updates
-echo "Enabling Flatpak autoupdates..."
-mkdir -p /etc/systemd/system/flatpak-update.timer.d
-cat <<EOF > /etc/systemd/system/flatpak-update.timer.d/custom.conf
-[Timer]
-OnBootSec=10min
-OnUnitActiveSec=1d
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak update -y
 EOF
 
-systemctl enable --now flatpak-update.timer
+sudo tee /etc/systemd/system/flatpak-update.timer >/dev/null <<EOF
+[Unit]
+Description=Dagelijkse Flatpak update
 
-# Optional: ensure current user has sudo
-CURRENT_USER=$(logname)
-usermod -aG sudo "$CURRENT_USER"
+[Timer]
+OnCalendar=daily
+Persistent=true
 
-echo "✅ Setup complete! You can now reboot or start using your system."
+[Install]
+WantedBy=timers.target
+EOF
+
+sudo systemctl daemon-reexec
+sudo systemctl enable --now flatpak-update.timer
+
+echo "✅ Post-installatie voltooid."
