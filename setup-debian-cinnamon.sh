@@ -24,6 +24,11 @@ sudo ufw default allow outgoing
 sudo ufw enable
 sudo ufw logging on
 
+# Eventuele APT-versies van Chrome, Brave en LibreOffice verwijderen
+echo ">>> Oude APT-versies van Chrome, Brave en LibreOffice verwijderen (indien aanwezig)..."
+sudo apt purge -y google-chrome-stable brave-browser libreoffice*
+sudo apt autoremove -y
+
 # Flatpak installeren
 echo ">>> Flatpak installeren..."
 sudo apt install -y flatpak gnome-software-plugin-flatpak
