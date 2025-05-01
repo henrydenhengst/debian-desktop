@@ -14,7 +14,9 @@ sudo timedatectl set-timezone Europe/Amsterdam
 
 # Updates
 echo ">>> APT updates uitvoeren..."
-sudo apt update && sudo apt -y upgrade lshw wget curl git
+sudo apt update && sudo apt -y upgrade 
+
+sudo apt install -y bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf  ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute ttf-mscorefonts-installer ufw unclutter unrar unzip usbutils vnstat wget whois lshw wget git
 
 # Firewall instellen
 echo ">>> Firewall instellen (ufw)..."
