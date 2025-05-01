@@ -4,6 +4,12 @@ set -e
 LOGFILE="$HOME/debian-postinstall.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
+echo ">>> Test internetverbinding..."
+if ! ping -c 1 1.1.1.1 &>/dev/null; then
+  echo "❌ Geen internetverbinding. Annuleer installatie."
+  exit 1
+fi
+
 echo "=== Post-installatie Debian Cinnamon ==="
 
 # Locale en tijdzone
