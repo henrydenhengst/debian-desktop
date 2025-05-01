@@ -29,12 +29,12 @@ Download ISO:
 2. **Herstart en log in** met je gebruikersnaam.
 3. **Open een Terminal** en voer het volgende uit:
 
-```bash
+```bash / desktop
 sudo apt install git -y
 git clone https://github.com/henrydenhengst/debian-desktop
 cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
+cp setup-debian-cinnamon.desktop ~/.local/share/applications/
 sudo ./setup-debian-cinnamon.sh
 
-```desktop
-cp setup-debian-cinnamon.desktop ~/.local/share/applications/
+
