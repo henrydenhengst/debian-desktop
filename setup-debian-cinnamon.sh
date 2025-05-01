@@ -25,7 +25,7 @@ sudo ufw enable
 sudo ufw logging on
 
 echo ">>> APT automatische updates inschakelen..."
-sudo apt install -y unattended-upgrades
+sudo apt install -y unattended-upgrades git lshw wget curl
 
 # Zorg dat automatische updates aanstaan
 sudo dpkg-reconfigure --priority=low unattended-upgrades
