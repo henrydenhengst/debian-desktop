@@ -1,4 +1,3 @@
-# debian-desktop
 
 # Debian Cinnamon Desktop Setup
 
