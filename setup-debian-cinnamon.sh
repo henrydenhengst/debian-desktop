@@ -14,7 +14,7 @@ sudo timedatectl set-timezone Europe/Amsterdam
 
 # Updates
 echo ">>> APT updates uitvoeren..."
-sudo apt update && sudo apt -y upgrade
+sudo apt update && sudo apt -y upgrade lshw wget curl git
 
 # Firewall instellen
 echo ">>> Firewall instellen (ufw)..."
