@@ -17,7 +17,7 @@ echo ">>> APT updates uitvoeren..."
 sudo apt update && sudo apt -y upgrade 
 
 echo ">>> APT cli tools toevoegen..."
-sudo apt install -y bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf  ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute ttf-mscorefonts-installer ufw unclutter unrar unzip usbutils vnstat wget whois lshw wget git
+sudo apt install -y bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf  ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute ufw unzip usbutils vnstat wget whois lshw wget git
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
@@ -29,11 +29,14 @@ sudo ufw default allow outgoing
 sudo ufw enable
 sudo ufw logging on
 
-echo ">>> APT automatische updates inschakelen..."
-sudo apt install -y unattended-upgrades git lshw wget curl
-
-# Zorg dat automatische updates aanstaan
-sudo dpkg-reconfigure --priority=low unattended-upgrades
+# Force enable unattended upgrades
+sudo apt install -y unattended-upgrades
+sudo tee /etc/apt/apt.conf.d/20auto-upgrades >/dev/null <<EOF
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::AutocleanInterval "7";
+APT::Periodic::Unattended-Upgrade "1";
+EOF
 
 
 # Flatpak installeren
