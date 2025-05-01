@@ -82,3 +82,9 @@ sudo systemctl daemon-reexec
 sudo systemctl enable --now flatpak-update.timer
 
 echo "✅ Post-installatie voltooid."
+
+echo ">>> Installatie voltooid. Wil je nu herstarten? (j/N)"
+read -r REBOOT
+if [[ "$REBOOT" =~ ^[JjYy]$ ]]; then
+  sudo reboot
+fi
