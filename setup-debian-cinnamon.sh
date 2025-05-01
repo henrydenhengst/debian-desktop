@@ -24,6 +24,13 @@ sudo ufw default allow outgoing
 sudo ufw enable
 sudo ufw logging on
 
+echo ">>> APT automatische updates inschakelen..."
+sudo apt install -y unattended-upgrades
+
+# Zorg dat automatische updates aanstaan
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+
 # Flatpak installeren
 echo ">>> Flatpak installeren..."
 sudo apt install -y flatpak gnome-software-plugin-flatpak
