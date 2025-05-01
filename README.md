@@ -4,11 +4,10 @@
 Dit project bevat een eenvoudig shellscript om een net geïnstalleerde Debian Cinnamon-desktop automatisch in te richten met:
 
 - **Chrome** en **Brave browser** via Flatpak
-- **LibreOffice Fresh** via Flatpak
 - **UFW-firewall**, dicht voor inkomend verkeer
 - **Automatische updates** voor APT en Flatpak
 - **WiFi-verbindingstest** vóór installatie
-- Voeg jezelf toe aan de `sudo` groep indien nodig
+- Voeg jezelf toe aan de `sudo` groep
 
 ---
 
