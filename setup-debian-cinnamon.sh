@@ -17,7 +17,7 @@ echo ">>> APT updates uitvoeren..."
 sudo apt update && sudo apt -y upgrade 
 
 echo ">>> APT cli tools toevoegen..."
-sudo apt install -y bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf  ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute ufw unzip usbutils vnstat wget whois lshw wget git
+sudo apt install -y bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute ufw unzip usbutils vnstat wget whois lshw wget git
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
@@ -45,7 +45,7 @@ sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Flatpak apps installeren
-echo ">>> Brave, Chromium en LibreOffice installeren via Flatpak..."
+echo ">>> Brave en Chrome installeren via Flatpak..."
 flatpak install -y flathub com.google.Chrome
 flatpak install -y flathub com.brave.Browser
 
