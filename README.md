@@ -1,58 +1,38 @@
 # debian-desktop
 
-Ensure WiFi is working before continuing
+# Debian Cinnamon Desktop Setup
 
-Install Flatpak + Flathub
+Dit project bevat een eenvoudig shellscript om een net geïnstalleerde Debian Cinnamon-desktop automatisch in te richten met:
 
-Install Chrome and Brave via Flatpak
+- **Chrome** en **Brave browser** via Flatpak
+- **LibreOffice Fresh** via Flatpak
+- **UFW-firewall**, dicht voor inkomend verkeer
+- **Automatische updates** voor APT en Flatpak
+- **WiFi-verbindingstest** vóór installatie
+- Voeg jezelf toe aan de `sudo` groep indien nodig
 
-Install LibreOffice Fresh via Flatpak
+---
 
-Enable UFW firewall (deny incoming, allow outgoing)
+## Systeemvereisten
 
-Enable auto-updates for APT and Flatpak
+- Debian 12 "Bookworm" met Cinnamon Desktop (Live ISO)
+- Werkende internetverbinding (WiFi of kabel)
+- Systeem is al geïnstalleerd vanaf de officiële ISO
 
-Add current user to sudo if needed
+Download ISO:  
+[Debian Cinnamon Live ISO (amd64)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
 
+---
 
-✅ Step-by-step setup using Debian Cinnamon Live ISO
+## Installatie-instructies
 
-    Download and boot from the Debian Cinnamon Live ISO
+1. **Installeer Debian Cinnamon** vanaf de ISO op je laptop.
+2. **Herstart en log in** met je gebruikersnaam.
+3. **Open een Terminal** en voer het volgende uit:
 
-        Get it here: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
-
-        Choose: debian-live-12.x.0-amd64-cinnamon.iso
-
-    Use the “Install” option from the live environment
-
-        This installs Debian Cinnamon to your hard disk
-
-    Reboot into your new installed system
-
-    Log in with the user you created during installation
-
-    Open the terminal and run the post-install script:
-
-        Either copy/paste the full script from above
-
-        Or download it directly:
-
-        curl -O https://your-server/setup-debian-cinnamon.sh
-        chmod +x setup-debian-cinnamon.sh
-        sudo ./setup-debian-cinnamon.sh
-
-    Wait for it to complete (a few minutes)
-
-After that, you’ll have:
-
-    Working WiFi
-
-    Chrome, Brave, LibreOffice (via Flatpak)
-
-    UFW firewall enabled
-
-    Auto updates for APT and Flatpak
-
-    Full sudo rights
-
-
+```bash
+sudo apt install git -y
+git clone https://github.com/henrydenhengst/debian-desktop
+cd debian-desktop
+chmod +x setup-debian-cinnamon.sh
+sudo ./setup-debian-cinnamon.sh
