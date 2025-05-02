@@ -4,6 +4,19 @@ set -e
 LOGFILE="$HOME/debian-postinstall.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 
+#!/bin/bash
+
+# Check of het systeem Debian is
+if ! grep -qi "debian" /etc/os-release; then
+    echo "Dit script is alleen bedoeld voor Debian. Installatie afgebroken."
+    exit 1
+fi
+
+# check voor Debian 12
+if ! grep -q 'VERSION="12' /etc/os-release; then
+    echo "Let op: dit script is getest op Debian 12 (Bookworm). Je gebruikt een andere versie."
+fi
+
 echo ">>> Test internetverbinding..."
 if ! ping -c 1 1.1.1.1 &>/dev/null; then
   echo "❌ Geen internetverbinding. Annuleer installatie."
