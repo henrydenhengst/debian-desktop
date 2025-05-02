@@ -31,12 +31,18 @@ sudo locale-gen nl_NL.UTF-8
 sudo update-locale LANG=nl_NL.UTF-8
 sudo timedatectl set-timezone Europe/Amsterdam
 
+# Ensure 'contrib' is enabled in APT sources
+if ! grep -q '^deb .*bookworm.*contrib' /etc/apt/sources.list; then
+    echo "Adding 'contrib' component to APT sources..."
+    sudo sed -i '/^deb .*bookworm/ s/main/main contrib/' /etc/apt/sources.list
+fi
+
 # Updates
 echo ">>> APT updates uitvoeren..."
 sudo apt update && sudo apt -y upgrade 
 
 echo ">>> APT cli tools toevoegen..."
-sudo apt install -y clamav restic bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute unzip usbutils vnstat wget whois lshw wget git
+sudo apt install -y clamav restic bash-completion bat binutils btop coreutils crunch curl exa ffmpeg firmware-iwlwifi firmware-linux firmware-misc-nonfree flameshot geany hplip iftop imagemagick lolcat lsof mc mtr neofetch neovim p7zip pandoc pciutils  printer-driver-all printer-driver-cups-pdf ranger ripgrep rsync smartmontools terminator tmux toilet tomb traceroute unzip usbutils vnstat wget whois lshw wget git ttf-mscorefonts-installer
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
