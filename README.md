@@ -18,7 +18,10 @@ Dit project geeft afgeschreven laptops van bedrijven een tweede leven én helpt 
 - In samenwerking met lokale **Repair Cafés** bieden we:
   - hulp bij installatie en gebruik  
   - eenvoudige computertrainingen  
-  - persoonlijke begeleiding  
+  - persoonlijke begeleiding
+
+Iedereen die een laptop meeneemt wordt **gratis geholpen**.  
+En natuurlijk kunnen mensen ook **zelf aan de slag** met de software uit deze repository.
 
 ---
 
