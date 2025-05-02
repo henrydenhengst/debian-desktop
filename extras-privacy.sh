@@ -36,6 +36,7 @@ install_app "Signal" org.signal.Signal
 install_app "Telegram" org.telegram.desktop
 install_app "Element (Matrix/Riot)" im.riot.Riot
 install_app "Jami (p2p bellen)" net.jami.Jami
+install_app "Jitsi Meet (via meet.jit.si of eigen server)" org.jitsi.jitsi-meet
 
 # Utilities
 install_app "KeePassXC (wachtwoordbeheerder)" org.keepassxc.KeePassXC
