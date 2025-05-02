@@ -3,6 +3,26 @@ set -e
 
 echo "=== Interactieve installatie van populaire Flatpaks ==="
 echo
+echo "Let op: deze extra toepassingen zijn handig, maar kunnen behoorlijk wat geheugen, opslag of CPU gebruiken."
+echo "Installeer deze alleen op laptops met voldoende prestaties (bijv. minimaal 4 GB RAM en een SSD)."
+echo
+echo "Zware applicaties in deze lijst:"
+echo " - OBS Studio (videobewerking)"
+echo " - Games"
+echo " - Zoom (videobellen)"
+echo " - Jitsi Meet (videobellen via browser)"
+echo " - Signal (chat + versleuteling)"
+echo " - Telegram"
+echo " - WhatsApp (Electron)"
+echo
+read -p "Weet je zeker dat je deze extra's wilt installeren? [j/N] " confirm
+
+if [[ ! "$confirm" =~ ^[Jj]$ ]]; then
+    echo "Installatie van extra software is overgeslagen."
+    exit 0
+fi
+
+# Hierna volgt de installatiecode...
 
 # Zorg dat Flatpak is geïnstalleerd
 if ! command -v flatpak &> /dev/null; then
@@ -29,7 +49,6 @@ apps+=(
   ["Audacity"]="org.audacityteam.Audacity"
   ["OBS Studio"]="com.obsproject.Studio"
   ["Kdenlive"]="org.kde.kdenlive"
-  ["OnlyOffice"]="org.onlyoffice.desktopeditors"
   ["PDF Arranger"]="com.github.jeromerobert.pdfarranger"
   ["Syncthing GTK"]="me.kozec.syncthingtk"
   ["Metadata Cleaner"]="fr.handbrake.ghb"
@@ -60,7 +79,6 @@ apps+=(
   ["Spotify"]="com.spotify.Client"
   ["Bitwarden"]="com.bitwarden.desktop"
   ["KeePassXC"]="org.keepassxc.KeePassXC"
-  ["Firefox"]="org.mozilla.firefox"
 )
 
 # Gaming
