@@ -24,6 +24,7 @@ Toegang tot een computer en het internet is geen luxe meer — het is een basisv
 
 - We zoeken **systeembeheerders en IT-vrijwilligers** die kunnen helpen bij het installeren en uitrollen van Linux-laptops.
 - We willen graag in contact komen met **voedselbanken** en **Repair Cafés** om onze doelgroep te bereiken en de laptops persoonlijk te kunnen overhandigen.
+- We zijn op zoek naar **bedrijven of organisaties die laptops willen doneren** — apparatuur die anders stof zou verzamelen, kan hier écht het verschil maken.
 
 Neem contact op via een issue of pull request in deze GitHub-repo — of start een lokaal initiatief met deze documentatie als basis!
 
