@@ -28,6 +28,7 @@ Toegang tot een computer en het internet is geen luxe meer — het is een basisv
 
 Neem contact op via een issue of pull request in deze GitHub-repo — of start een lokaal initiatief met deze documentatie als basis!
 
+---
 
 ## Dit project bevat eenvoudige shellscripts om een net geïnstalleerde Debian Cinnamon-desktop automatisch in te richten met:
 
