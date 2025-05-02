@@ -1,12 +1,13 @@
 
 # Debian Cinnamon Desktop Setup
 
-Dit project bevat een eenvoudig shellscript om een net geïnstalleerde Debian Cinnamon-desktop automatisch in te richten met:
+Dit project bevat eenvoudige shellscripts om een net geïnstalleerde Debian Cinnamon-desktop automatisch in te richten met:
 
 - **Chrome** en **Brave browser** via Flatpak
 - **UFW-firewall**, dicht voor inkomend verkeer
 - **Automatische updates** voor APT en Flatpak
 - **WiFi-verbindingstest** vóór installatie
+- **extras** voor aanvullende apps
 - Voeg jezelf toe aan de `sudo` groep
 
 ---
