@@ -46,6 +46,8 @@ sudo apt install -y clamav restic bash-completion bat binutils btop coreutils cr
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
+sudo fc-cache -fv
+
 # Firewall instellen
 echo ">>> Firewall instellen (ufw)..."
 sudo apt install -y ufw
