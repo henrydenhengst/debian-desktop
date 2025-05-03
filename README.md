@@ -36,6 +36,8 @@ Met dit project voorkomen we een digitale tweedeling en maken we technologie toe
 
 ## 🤝 Help mee
 
+- Gezocht: Project Owner (vrijwillig) voor dit project.
+Een project owner – iemand die energie krijgt van organiseren, contact leggen, bedrijven benaderen, opslag/transport afstemmen, en het project zichtbaar maken. Wij zorgen voor de techniek. Jij zorgt ervoor dat het project groeit. Wat breng jij mee? Communicatief vermogen, Zelfstandig kunnen organiseren. Eventueel ervaring met vrijwilligerswerk, fondsenwerving of sociale initiatieven Wat krijg je terug? Impact maken in je eigen regio.Samenwerken aan een betekenisvol, technisch én sociaal initiatief. Creatieve vrijheid om het project vorm te geven
 - We zoeken **systeembeheerders en IT-vrijwilligers** om laptops te installeren en uit te rollen.
 - We komen graag in contact met **voedselbanken** en **Repair Cafés** om onze doelgroep te bereiken.
 - We zijn op zoek naar **bedrijven of organisaties die laptops willen doneren** — jouw oude hardware kan écht het verschil maken.
