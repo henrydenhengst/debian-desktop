@@ -120,12 +120,6 @@ Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wa
 
 ---
 
-Wil je dat ik deze uitleg ook lever als PDF of met screenshots?
-
-
-
----
-
 ## Installatie-instructies
 
 1. Installeer Debian Cinnamon vanaf de ISO op je laptop of met netboot.xyz kun je meerdere apparaten tegelijk installeren.
