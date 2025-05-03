@@ -71,7 +71,7 @@ Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop au
 
 ## Installatie-instructies
 
-1. Installeer Debian Cinnamon vanaf de ISO op je laptop.
+1. Installeer Debian Cinnamon vanaf de ISO op je laptop of met netboot.xyz kun je meerdere apparaten tegelijk installeren.
 2. Herstart en log in met je gebruikersnaam.
 3. Open een terminal en voer het volgende uit:
 
@@ -81,3 +81,5 @@ git clone https://github.com/henrydenhengst/debian-desktop
 cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
 sudo ./setup-debian-cinnamon.sh
+
+
