@@ -77,4 +77,40 @@ Gebruik wifi of een UTP-kabel om verbinding te maken.
 
 ### 3. Start de Calamares Installer
 
-Zoek op het bureaublad of in het menu naar "
+Zoek op het bureaublad of in het menu naar "Install [Debian]".
+
+### 4. Volg het installatieproces
+
+- **Taal**: Nederlands  
+- **Tijdzone**: Amsterdam (Nederland)  
+- **Toetsenbord**: US - International  
+- **Partities**: Automatisch (hele schijf wissen)  
+- **Gebruiker aanmaken**: kies zelf een naam en wachtwoord  
+  - *Niet automatisch inloggen*  
+  - *Gebruik root-wachtwoord gelijk aan gebruikerswachtwoord*
+
+### 5. Bevestigen en installeren
+
+Controleer alle instellingen, klik op *Installeren*, wacht 5–15 minuten.  
+Kies *Opnieuw opstarten* en verwijder de USB-stick als daarom wordt gevraagd.
+
+---
+
+## Post-installatie
+
+### 1. Inloggen
+
+Log in met je aangemaakte gebruikersnaam.
+
+### 2. Voer het post-installatiescript uit
+
+Open een terminal en voer het volgende uit:
+
+```bash
+sudo apt install git -y
+git clone https://github.com/henrydenhengst/debian-desktop
+cd debian-desktop
+chmod +x setup-debian-cinnamon.sh
+sudo ./setup-debian-cinnamon.sh
+
+
