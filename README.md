@@ -23,6 +23,10 @@ Dit project geeft afgeschreven laptops van bedrijven een tweede leven én helpt 
 Iedereen die een laptop ontvangt, wordt **gratis geholpen**.  
 Natuurlijk kunnen mensen ook **zelf aan de slag** met de software uit deze repository.
 
+## 🤲 Bijdragen
+
+Wil je helpen? Bekijk dan het [CONTRIBUTING.md](CONTRIBUTING.md) bestand voor richtlijnen en suggesties.
+
 ---
 
 ## Waarom dit belangrijk is
