@@ -69,6 +69,10 @@ Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop au
 > **Download ISO:**  
 > [Debian Cinnamon Live ISO (amd64)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
 
+---
+
+## Installatie Instructies 
+
 1. Start vanaf Live-USB
 
 Installeer Debian Cinnamon vanaf de ISO op je laptop of met netboot.xyz dan kun je meerdere apparaten tegelijk installeren.
