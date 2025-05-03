@@ -61,9 +61,10 @@ Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop au
 
 ## Systeemvereisten
 
-- Debian 12 "Bookworm" **met Cinnamon Desktop**  
+- 4 GB intern geheugen, minimaal
+- 50 GB SSD harddisk, minimaal
 - Werkende internetverbinding (wifi of bekabeld)
-- Systeem moet al zijn geïnstalleerd vanaf de officiële ISO
+- AMD of Intel computer 
 
 > **Download ISO:**  
 > [Debian Cinnamon Live ISO (amd64)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
