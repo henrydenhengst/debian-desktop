@@ -68,6 +68,62 @@ Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop au
 > **Download ISO:**  
 > [Debian Cinnamon Live ISO (amd64)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
 
+1. Start vanaf Live-USB
+
+Plaats de USB-stick met de Debian Linux distributie.
+
+Start je computer opnieuw op en kies de USB-stick in het opstartmenu (vaak via F2, F12, ESC of DEL bij het opstarten).
+
+Kies voor "Live Session" of "Try without installing" om de desktopomgeving te laden.
+
+2. Start Calamares Installer
+
+Zoek op het bureaublad of in het menu naar iets als Install [Debian] en klik erop om Calamares te starten.
+
+3. Taal kiezen
+
+Selecteer de gewenste taal (Nederlands) en klik op Volgende.
+
+4. Tijdzone instellen
+
+Kies je regio en tijdzone op de kaart (Amsterdam , Nederland) of via de lijst. Klik op Volgende.
+
+5. Toetsenbordindeling
+
+Selecteer je toetsenbordindeling (US - International). Je kunt het testen in het tekstvak onderaan.
+
+6. Schijfpartities instellen
+
+Automatisch (aanbevolen): Calamares zal de hele schijf wissen en Linux installeren.
+
+Handmatig: NIET gebruiken.
+
+Klik op Volgende wanneer je klaar bent.
+
+7. Gebruikersaccount aanmaken
+
+Vul je naam, gebruikersnaam, computernaam en wachtwoord in.
+
+Je kunt kiezen om automatisch in te loggen (niet doen!) en/of het root-wachtwoord hetzelfde te maken (wel doen!)
+
+8. Overzicht en Installatie starten
+
+Controleer je instellingen.
+
+Klik op Installeren en bevestig je keuze.
+
+9. Installatieproces
+
+Wacht tot het proces is voltooid (duurt meestal 5–15 minuten).
+
+Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wanneer daarom gevraagd wordt.
+
+---
+
+Wil je dat ik deze uitleg ook lever als PDF of met screenshots?
+
+
+
 ---
 
 ## Installatie-instructies
