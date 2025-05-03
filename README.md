@@ -70,6 +70,8 @@ Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop au
 
 1. Start vanaf Live-USB
 
+Installeer Debian Cinnamon vanaf de ISO op je laptop of met netboot.xyz dan kun je meerdere apparaten tegelijk installeren.
+
 Plaats de USB-stick met de Debian Linux distributie.
 
 Start je computer opnieuw op en kies de USB-stick in het opstartmenu (vaak via F2, F12, ESC of DEL bij het opstarten).
@@ -120,11 +122,10 @@ Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wa
 
 ---
 
-## Installatie-instructies
+## Post-Install-Instructies
 
-1. Installeer Debian Cinnamon vanaf de ISO op je laptop of met netboot.xyz kun je meerdere apparaten tegelijk installeren.
-2. Herstart en log in met je gebruikersnaam.
-3. Open een terminal en voer het volgende uit:
+1. Herstart en log in met je gebruikersnaam.
+2. Open een terminal en voer het volgende uit:
 
 ```bash
 sudo apt install git -y
