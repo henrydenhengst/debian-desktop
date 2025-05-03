@@ -16,8 +16,7 @@ Dit project geeft afgeschreven laptops van bedrijven een tweede leven én helpt 
   - eenvoudige computertrainingen
   - persoonlijke begeleiding
 
-Iedereen die een laptop meeneemt wordt **gratis geholpen**.  
-En natuurlijk kunnen mensen ook **zelf aan de slag** met de software uit deze repository.
+Iedereen die een laptop meeneemt wordt **gratis geholpen**. En natuurlijk kunnen mensen ook **zelf aan de slag** met de software uit deze repository.
 
 ## Waarom dit belangrijk is
 
