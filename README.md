@@ -125,8 +125,8 @@ Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wa
 
 ## Post-Install-Instructies
 
-1. Na herstart log in met je gebruikersnaam.
-2. Open een terminal en voer het volgende uit:
+10. Na herstart log in met je gebruikersnaam.
+11. Open een terminal en voer het volgende uit:
 
 ```bash
 sudo apt install git -y
