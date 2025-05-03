@@ -48,15 +48,15 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
 
 ## Installatie-instructies
 
-1. **Start vanaf Live-USB**  
+### 1. **Start vanaf Live-USB**  
    Gebruik de Debian Cinnamon ISO op een USB-stick. Start je laptop opnieuw op en kies de USB als opstartmedium (vaak via F2, F12, ESC of DEL).
 
-2. **Verbind met internet** (wifi of UTP)
+### 2. **Verbind met internet** (wifi of UTP)
 
-3. **Start Calamares Installer**  
+### 3. **Start Calamares Installer**  
    Zoek op het bureaublad of in het menu naar ‘Install’ en open Calamares.
 
-4. **Kies instellingen in de wizard:**
+### 4. **Kies instellingen in de wizard:**
    - Taal: Nederlands
    - Tijdzone: Amsterdam
    - Toetsenbord: US - International
@@ -65,19 +65,19 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
      - Automatisch inloggen: uit
      - Root-wachtwoord gelijk aan gebruiker: aan
 
-5. **Controleer en installeer**  
+### 5. **Controleer en installeer**  
    Klik op "Installeren" en bevestig je keuzes.
 
-6. **Herstart**  
+### 6. **Herstart**  
    Na installatie: verwijder de USB-stick en start opnieuw op.
 
 ---
 
 ## Post-installatie: setup uitvoeren
 
-1. **Login met je gebruikersnaam**
+### 1. **Login met je gebruikersnaam**
 
-2. **Open een terminal en voer uit:**
+### 2. **Open een terminal en voer uit:**
 
 ```bash
 sudo apt install git -y
