@@ -97,6 +97,8 @@ cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
 sudo ./setup-debian-cinnamon.sh
 
+```
+
 ---
 
 ## 🤲 Bijdragen
