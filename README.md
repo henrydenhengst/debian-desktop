@@ -86,3 +86,14 @@ git clone https://github.com/henrydenhengst/debian-desktop
 cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
 sudo ./setup-debian-cinnamon.sh
+```
+
+---
+
+🤲 Bijdragen
+
+Wil je helpen? Bekijk het CONTRIBUTING.md-bestand voor richtlijnen en manieren om bij te dragen.
+
+📄 Meer informatie
+
+Zie ook ABOUT.md voor achtergrondinformatie over dit project.
