@@ -49,7 +49,7 @@ Met dit project voorkomen we een digitale tweedeling en maken we technologie toe
 Deze GitHub-repo bevat eenvoudige shellscripts om een Debian Cinnamon-desktop automatisch in te richten met:
 
 - Google Chrome en Brave browser (via Flatpak)
-- LibreOffice (Flatpak, Fresh-versie)
+- Er is een aanvullend apps extras en extras-privacy script.
 - UFW-firewall dichtgezet voor inkomend verkeer
 - Automatische updates voor APT en Flatpak
 - WiFi-verbindingstest vóór installatie
