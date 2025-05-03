@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Debian Desktop Setup
-Comment=Start automatisch configuratiescript voor Debian Cinnamon
-Exec=gnome-terminal -- bash -c "cd ~/debian-desktop && sudo ./setup-debian-cinnamon.sh"
-Icon=utilities-terminal
-Terminal=false
-Type=Application
-Categories=System;
