@@ -1,3 +1,4 @@
+
 # Debian Cinnamon Desktop Setup
 
 Een eenvoudig en krachtig project om laptops te hergebruiken en mensen digitaal te betrekken.
@@ -20,7 +21,8 @@ Iedereen die een laptop meeneemt wordt **gratis geholpen**. En natuurlijk kunnen
 
 ## Waarom dit belangrijk is
 
-Digitale uitsluiting is een groeiend probleem. Toegang tot een computer en internet is geen luxe meer, maar een **basisvoorwaarde voor volwaardig meedoen** in de maatschappij.  
+Digitale uitsluiting is een groeiend probleem.  
+Toegang tot een computer en internet is geen luxe meer, maar een **basisvoorwaarde voor volwaardig meedoen** in de maatschappij.  
 Met dit project voorkomen we een digitale tweedeling en maken we technologie toegankelijk voor iedereen.
 
 ## Wat zit er in dit project?
@@ -28,7 +30,7 @@ Met dit project voorkomen we een digitale tweedeling en maken we technologie toe
 Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop automatisch in te richten met:
 
 - Google Chrome en Brave browser (via Flatpak)
-- Extra scripts: `apps-extras` en `extras-privacy`
+- Aanvullende scripts: `apps-extras` en `extras-privacy`
 - UFW-firewall dichtgezet voor inkomend verkeer
 - Automatische updates voor APT en Flatpak
 - WiFi-verbindingstest vóór installatie
@@ -42,42 +44,51 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
 - Werkende internetverbinding (wifi of bekabeld)
 - AMD of Intel processor
 
-** [Download Debian Cinnamon Live ISO (64bit)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
+**Download hier de [Debian Cinnamon Live ISO (64-bit)](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)**
 
 ---
 
 ## Installatie-instructies
 
-### 1. **Start vanaf Live-USB**  
-   Gebruik de Debian Cinnamon ISO op een USB-stick. Start je laptop opnieuw op en kies de USB als opstartmedium (vaak via F2, F12, ESC of DEL).
+### 1. Start vanaf Live-USB
 
-### 2. **Verbind met internet** (wifi of UTP)
+Gebruik de Debian Cinnamon ISO op een USB-stick.  
+Start je laptop opnieuw op en kies de USB als opstartmedium (vaak via F2, F12, ESC of DEL).
 
-### 3. **Start Calamares Installer**  
-   Zoek op het bureaublad of in het menu naar ‘Install’ en open Calamares.
+### 2. Verbind met internet
 
-### 4. **Kies instellingen in de wizard:**
-   - Taal: Nederlands
-   - Tijdzone: Amsterdam
-   - Toetsenbord: US - International
-   - Partities: Automatisch (de hele schijf wissen)
-   - Gebruiker: Vul naam en wachtwoord in  
-     - Automatisch inloggen: uit
-     - Root-wachtwoord gelijk aan gebruiker: aan
+Gebruik een bekabelde verbinding of wifi.
 
-### 5. **Controleer en installeer**  
-   Klik op "Installeren" en bevestig je keuzes.
+### 3. Start de Calamares Installer
 
-### 6. **Herstart**  
-   Na installatie: verwijder de USB-stick en start opnieuw op.
+Zoek op het bureaublad of in het menu naar “Install” en open de installer.
+
+### 4. Doorloop de installatie
+
+- **Taal**: Nederlands  
+- **Tijdzone**: Europa/Amsterdam  
+- **Toetsenbord**: US - International  
+- **Partities**: Automatisch (gehele schijf wissen)  
+- **Gebruiker**: vul naam en wachtwoord in  
+  - Automatisch inloggen: **uit**  
+  - Root-wachtwoord gelijk aan gebruiker: **aan**
+
+### 5. Start installatie
+
+Controleer je instellingen en klik op “Installeren”.  
+Bevestig en wacht 5–15 minuten tot de installatie voltooid is.
+
+### 6. Herstart
+
+Na installatie: verwijder de USB-stick en start opnieuw op.
 
 ---
 
-## Post-installatie: setup uitvoeren
+## Post-installatie
 
-### 1. **Login met je gebruikersnaam**
+### 1. Log in met je gebruikersnaam
 
-### 2. **Open een terminal en voer uit:**
+### 2. Open een terminal en voer het volgende uit:
 
 ```bash
 sudo apt install git -y
@@ -85,10 +96,8 @@ git clone https://github.com/henrydenhengst/debian-desktop
 cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
 sudo ./setup-debian-cinnamon.sh
-```
 
 ---
-
 
 ## 🤲 Bijdragen
 
