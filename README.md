@@ -90,10 +90,11 @@ sudo ./setup-debian-cinnamon.sh
 
 ---
 
-🤲 Bijdragen
 
-Wil je helpen? Bekijk het CONTRIBUTING.md-bestand voor richtlijnen en manieren om bij te dragen.
+## 🤲 Bijdragen
 
-📄 Meer informatie
+Wil je helpen? Bekijk het [CONTRIBUTING.md](CONTRIBUTING.md)-bestand voor richtlijnen en manieren om bij te dragen.
 
-Zie ook ABOUT.md voor achtergrondinformatie over dit project.
+## meer informatie over ons
+
+📄 Meer informatie: zie [ABOUT.md](ABOUT.md)
