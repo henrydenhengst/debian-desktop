@@ -42,7 +42,7 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
 - Werkende internetverbinding (wifi of bekabeld)
 - AMD of Intel processor
 
-**Download Debian Cinnamon Live ISO (64bit) (https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
+** [Download] Debian Cinnamon Live ISO (64bit) (https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/)
 
 ---
 
