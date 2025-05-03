@@ -124,7 +124,7 @@ Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wa
 
 ## Post-Install-Instructies
 
-1. Herstart en log in met je gebruikersnaam.
+1. Na herstart log in met je gebruikersnaam.
 2. Open een terminal en voer het volgende uit:
 
 ```bash
