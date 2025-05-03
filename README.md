@@ -112,5 +112,6 @@ git clone https://github.com/henrydenhengst/debian-desktop
 cd debian-desktop
 chmod +x setup-debian-cinnamon.sh
 sudo ./setup-debian-cinnamon.sh
+```
 
-
+📄 Meer informatie: zie [ABOUT.md](ABOUT.md)
