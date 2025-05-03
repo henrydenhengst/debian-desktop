@@ -83,23 +83,27 @@ Start je computer opnieuw op en kies de USB-stick in het opstartmenu (vaak via F
 
 Kies voor "Live Session" of "Try without installing" om de desktopomgeving te laden.
 
-2. Start Calamares Installer
+2. Netwerk 
+
+Connect het UTP netwerk of WIFI
+
+3. Start Calamares Installer
 
 Zoek op het bureaublad of in het menu naar iets als Install [Debian] en klik erop om Calamares te starten.
 
-3. Taal kiezen
+4. Taal kiezen
 
 Selecteer de gewenste taal (Nederlands) en klik op Volgende.
 
-4. Tijdzone instellen
+5. Tijdzone instellen
 
 Kies je regio en tijdzone op de kaart (Amsterdam , Nederland) of via de lijst. Klik op Volgende.
 
-5. Toetsenbordindeling
+6. Toetsenbordindeling
 
 Selecteer je toetsenbordindeling (US - International). Je kunt het testen in het tekstvak onderaan.
 
-6. Schijfpartities instellen
+7. Schijfpartities instellen
 
 Automatisch (aanbevolen): Calamares zal de hele schijf wissen en Linux installeren.
 
@@ -107,19 +111,19 @@ Handmatig: NIET gebruiken.
 
 Klik op Volgende wanneer je klaar bent.
 
-7. Gebruikersaccount aanmaken
+8. Gebruikersaccount aanmaken
 
 Vul je naam, gebruikersnaam, computernaam en wachtwoord in.
 
 Je kunt kiezen om automatisch in te loggen (niet doen!) en/of het root-wachtwoord hetzelfde te maken (wel doen!)
 
-8. Overzicht en Installatie starten
+9. Overzicht en Installatie starten
 
 Controleer je instellingen.
 
 Klik op Installeren en bevestig je keuze.
 
-9. Installatieproces
+10. Installatieproces
 
 Wacht tot het proces is voltooid (duurt meestal 5–15 minuten).
 
@@ -129,11 +133,11 @@ Als de installatie klaar is, kies Opnieuw opstarten en Verwijder de USB-stick wa
 
 ## Post-Install-Instructies
 
-10. Login
+11. Login
 
 Na herstart log in met je gebruikersnaam.
 
-11. Run Post Install Script 
+12. Run Post Install Script 
 
 Open een terminal en voer het volgende uit:
 
