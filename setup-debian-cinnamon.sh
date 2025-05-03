@@ -37,6 +37,18 @@ if ! grep -q '^deb .*bookworm.*contrib' /etc/apt/sources.list; then
     sudo sed -i '/^deb .*bookworm/ s/main/main contrib/' /etc/apt/sources.list
 fi
 
+# Ensure 'non-free' is enabled in APT sources
+if ! grep -q '^deb .*bookworm.*non-free' /etc/apt/sources.list; then
+    echo "Adding 'non-free' component to APT sources..."
+    sudo sed -i '/^deb .*bookworm/ s/main.*$/& non-free/' /etc/apt/sources.list
+fi
+
+# Ensure 'non-free-firmware' is enabled in APT sources (Debian 12+)
+if ! grep -q '^deb .*bookworm.*non-free-firmware' /etc/apt/sources.list; then
+    echo "Adding 'non-free-firmware' component to APT sources..."
+    sudo sed -i '/^deb .*bookworm/ s/main.*$/& non-free-firmware/' /etc/apt/sources.list
+fi
+
 # Updates
 echo ">>> APT updates uitvoeren..."
 sudo apt update && sudo apt -y upgrade 
