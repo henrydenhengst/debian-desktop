@@ -25,7 +25,7 @@ Natuurlijk kunnen mensen ook **zelf aan de slag** met de software uit deze repos
 
 ## 🤲 Bijdragen
 
-Wil je helpen? Bekijk dan het [CONTRIBUTING.md](CONTRIBUTING.md) bestand voor richtlijnen en suggesties.
+Wil je helpen? Bekijk dan [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
