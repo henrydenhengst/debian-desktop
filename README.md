@@ -52,9 +52,6 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
 
 ### 1. Start vanaf Live-USB
 
-Gebruik de Debian Cinnamon ISO op een USB-stick.  
-Start je laptop opnieuw op en kies de USB als opstartmedium (vaak via F2, F12, ESC of DEL).
-
 Maak een opstartbare USB-stick
 
 Gebruik een van de volgende gratis tools om de ISO op een USB-stick te zetten:
