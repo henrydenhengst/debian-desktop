@@ -55,6 +55,16 @@ Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop aut
 Gebruik de Debian Cinnamon ISO op een USB-stick.  
 Start je laptop opnieuw op en kies de USB als opstartmedium (vaak via F2, F12, ESC of DEL).
 
+Maak een opstartbare USB-stick
+
+Gebruik een van de volgende gratis tools om de ISO op een USB-stick te zetten:
+
+- **Windows:** [Rufus](https://rufus.ie/)
+- **macOS:** [balenaEtcher](https://www.balena.io/etcher/)
+- **Linux:** Gebruik `gnome-multi-writer`, `dd` of `balenaEtcher`
+
+Let op: USB-stick van minimaal 4 GB vereist. Selecteer bij voorkeur "ISO mode" als dat wordt gevraagd.
+
 ### 2. Verbind met internet
 
 Gebruik een bekabelde verbinding of wifi.
