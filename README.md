@@ -65,6 +65,16 @@ Gebruik een van de volgende gratis tools om de ISO op een USB-stick te zetten:
 
 Let op: USB-stick van minimaal 4 GB vereist. Selecteer bij voorkeur "ISO mode" als dat wordt gevraagd.
 
+Start op vanaf USB
+
+- Plaats de USB-stick in de laptop
+- Herstart de computer
+- Tijdens het opstarten druk je op de toets om het opstartmenu te openen:
+  - Veelgebruikte toetsen: `F12`, `ESC`, `DEL`, `F2`
+- Kies daar de USB-stick als opstartmedium
+
+Soms moet je in het BIOS/UEFI opstartvolgorde aanpassen of Secure Boot uitschakelen. Zoek indien nodig naar “Boot order” of “Secure Boot” in het BIOS-menu.
+
 ### 2. Verbind met internet
 
 Gebruik een bekabelde verbinding of wifi.
