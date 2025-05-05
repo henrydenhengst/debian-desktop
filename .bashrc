@@ -34,25 +34,6 @@ alias gl='git log --oneline --graph --all'
 alias gco='git checkout'
 alias gb='git branch'
 
-# Fancy Nerd Font Prompt
-parse_git_branch() {
-  git rev-parse --is-inside-work-tree &>/dev/null || return
-  local branch
-  branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
-  echo -e " $branch"
-}
-
-exit_status_prompt() {
-  local status=$?
-  if [ $status -eq 0 ]; then
-    echo -e "\e[32m✔"
-  else
-    echo -e "\e[31m✘ $status"
-  fi
-}
-
-PS1='\e[1;30m\e[1;32m\u@\h\e[1;30m\e[1;34m\w\e[33m $(parse_git_branch)\e[0m\n\e[1;30m\e[0m $(exit_status_prompt) \e[0m '
-
 # Editor
 export EDITOR=vim
 
