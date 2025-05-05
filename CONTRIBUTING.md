@@ -1,3 +1,6 @@
+![GitHub contributors](https://img.shields.io/github/contributors/henrydenhengst/debian-desktop)
+![License](https://img.shields.io/github/license/henrydenhengst/debian-desktop)
+
 ## 🤝 Help mee
 
 - **Gezocht: Product Owner (vrijwillig, agile-denker)**  
