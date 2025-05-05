@@ -52,6 +52,11 @@ nnoremap <Space> :noh<CR>   " Space clears search highlight
 nnoremap <C-s> :w<CR>       " Ctrl+S to save
 inoremap jk <Esc>           " 'jk' to exit insert mode
 
+" Enable true color (needed for proper Nerd Font rendering)
+if has("termguicolors")
+  set termguicolors
+endif
+
 " System admin quick open
 command! Vbash :e ~/.bashrc
 command! Vvim :e ~/.vimrc
