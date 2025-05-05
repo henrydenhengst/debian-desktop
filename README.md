@@ -125,3 +125,6 @@ Wil je helpen? Bekijk het [CONTRIBUTING.md](CONTRIBUTING.md)-bestand voor richtl
 ## meer informatie over ons
 
 📄 Meer informatie: zie [ABOUT.md](ABOUT.md)
+
+![GitHub contributors](https://img.shields.io/github/contributors/henrydenhengst/debian-desktop)
+![License](https://img.shields.io/github/license/henrydenhengst/debian-desktop)
