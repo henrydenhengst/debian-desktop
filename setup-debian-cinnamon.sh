@@ -58,9 +58,6 @@ sudo apt install -y kitty shellcheck namebench preload clamav clamtk restic bash
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
-# Nerd Font installer for Debian
-bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)" 
-
 # Firewall instellen
 echo ">>> Firewall instellen (ufw)..."
 sudo apt install -y ufw
