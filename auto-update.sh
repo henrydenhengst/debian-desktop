@@ -3,7 +3,8 @@
 
 # Instructies
 #
-# 1. Sla het script op als auto-update.sh (bijv. in /usr/local/bin/).
+# 1. Sla het script op als auto-update.sh
+# (bijv. in /usr/local/bin/).
 # 2. Maak het uitvoerbaar:
 # sudo chmod +x /usr/local/bin/auto-update.sh
 # 3. Voeg een cronjob toe:
