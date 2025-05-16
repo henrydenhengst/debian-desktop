@@ -29,7 +29,8 @@ echo "Cleaning APT packages..." >> "$LOGFILE"
 apt -y autoremove >> "$LOGFILE" 2>&1
 apt -y autoclean >> "$LOGFILE" 2>&1
 
-# Update Flatpaks (als flatpak is geïnstalleerd)
+# Update Flatpaks 
+# (als flatpak is geïnstalleerd)
 if command -v flatpak &> /dev/null; then
     echo "Updating Flatpaks..." >> "$LOGFILE"
     flatpak update -y >> "$LOGFILE" 2>&1
