@@ -1,6 +1,5 @@
 #!/bin/bash
-
-
+#
 # Instructies
 #
 # 1. Sla het script op als auto-update.sh
@@ -14,6 +13,7 @@
 # 0 3 * * * /usr/local/bin/
 #
 # Logbestand locatie (optioneel)
+#
 LOGFILE="/var/log/auto-update.log"
 
 echo "== Start update: $(date) ==" >> "$LOGFILE"
