@@ -58,6 +58,10 @@ sudo apt install -y kitty shellcheck namebench preload clamav clamav-daemon clam
 
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 
+# Anti Virus 
+sudo systemctl enable clamav-daemon
+sudo systemctl start clamav-daemon
+
 # Firewall instellen
 echo ">>> Firewall instellen (ufw)..."
 sudo apt install -y ufw
