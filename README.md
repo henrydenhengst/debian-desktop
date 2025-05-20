@@ -27,7 +27,7 @@ Met dit project voorkomen we een digitale tweedeling en maken we technologie toe
 
 ## Wat zit er in dit project?
 
-Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop automatisch in te richten met:
+Deze repository bevat eenvoudige shellscripts om een Debian Cinnamon-desktop automatisch in te richten met o.a.:
 
 - Google Chrome en Brave browser (via Flatpak)
 - Aanvullende scripts: `apps-extras` en `extras-privacy`
