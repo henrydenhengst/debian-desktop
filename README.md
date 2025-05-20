@@ -7,7 +7,7 @@ Een eenvoudig en krachtig project om laptops te hergebruiken en mensen digitaal 
 
 Dit project geeft afgeschreven laptops van bedrijven een tweede leven én helpt mensen om verbonden te blijven met onze digitale samenleving.
 
-## Wat we doen
+## Wat we (willen) doen
 
 - **Bedrijven** doneren hun oude, nog bruikbare laptops.  
 - **Vrijwilligers** installeren een gebruiksvriendelijke Debian Linux-desktop, met deze GitHub-repo als basis.  
