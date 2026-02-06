@@ -1,6 +1,6 @@
 #!/bin/bash
 # =====================================================
-# FULL HOME ASSISTANT STACK SETUP SCRIPT (BULLETPROOF + BACKUPS + CRON)
+# FULL HOME ASSISTANT STACK SETUP SCRIPT (BULLETPROOF + BACKUPS + GPT AI)
 # Debian Linux
 # =====================================================
 
@@ -13,7 +13,7 @@ echo "===================================================="
 # -------------------------------
 # Pre-installatie: check vrije schijfruimte
 # -------------------------------
-MIN_DISK_GB=10
+MIN_DISK_GB=12   # Extra ruimte voor GPT container + backups
 FREE_DISK_GB=$(df / | tail -1 | awk '{print int($4/1024/1024)}')
 echo "Vrije schijfruimte: ${FREE_DISK_GB} GB"
 if [ "$FREE_DISK_GB" -lt "$MIN_DISK_GB" ]; then
@@ -25,7 +25,7 @@ echo "✅ Voldoende schijfruimte beschikbaar."
 # -------------------------------
 # Pre-installatie: check RAM
 # -------------------------------
-MIN_RAM_MB=2048
+MIN_RAM_MB=2500  # Extra RAM voor GPT AI container
 TOTAL_RAM_MB=$(free -m | awk '/Mem:/ {print $2}')
 echo "Beschikbaar RAM: ${TOTAL_RAM_MB} MB"
 if [ "$TOTAL_RAM_MB" -lt "$MIN_RAM_MB" ]; then
@@ -66,7 +66,7 @@ echo "⚠️ Log uit en opnieuw in om Docker zonder sudo te gebruiken."
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
-for port in {8120..8129}; do
+for port in {8120..8130}; do
     sudo ufw allow ${port}/tcp
 done
 sudo ufw --force enable
@@ -92,7 +92,7 @@ ls -1 /dev/serial/by-id || true
 echo "Let op: gebruik bij voorkeur de /dev/serial/by-id paden voor Zigbee & Z-Wave."
 
 # -------------------------------
-# 5b. Zigbee + Z-Wave detecteren (interactief + persistent pad validatie)
+# 5b. Zigbee + Z-Wave detecteren
 # -------------------------------
 echo "=== Detecteer Zigbee USB sticks ==="
 ZIGBEE_OPTIONS=($(ls -1 /dev/serial/by-id/ | grep -iE "zigbee|cc2531|conbee|sonoff" || true))
@@ -108,7 +108,7 @@ else
 fi
 
 if [[ ! "$ZIGBEE_PATH" =~ ^/dev/serial/by-id/ ]] || [ ! -e "$ZIGBEE_PATH" ]; then
-    echo "❌ FOUT: Zigbee pad '$ZIGBEE_PATH' is ongeldig. Gebruik altijd een persistent path uit /dev/serial/by-id."
+    echo "❌ FOUT: Zigbee pad '$ZIGBEE_PATH' is ongeldig."
     exit 1
 fi
 echo "✅ Zigbee pad is geldig."
@@ -127,7 +127,7 @@ else
 fi
 
 if [[ ! "$ZWAVE_PATH" =~ ^/dev/serial/by-id/ ]] || [ ! -e "$ZWAVE_PATH" ]; then
-    echo "❌ FOUT: Z-Wave pad '$ZWAVE_PATH' is ongeldig. Gebruik altijd een persistent path uit /dev/serial/by-id."
+    echo "❌ FOUT: Z-Wave pad '$ZWAVE_PATH' is ongeldig."
     exit 1
 fi
 echo "✅ Z-Wave pad is geldig."
@@ -155,6 +155,7 @@ printf "%-20s %-10s %-30s\n" "Dozzle" "8126" "-"
 printf "%-20s %-10s %-30s\n" "InfluxDB" "8127" "-"
 printf "%-20s %-10s %-30s\n" "Grafana" "8128" "-"
 printf "%-20s %-10s %-30s\n" "Z-Wave (zwavejs2mqtt)" "8129" "$ZWAVE_PATH"
+printf "%-20s %-10s %-30s\n" "GPT AI" "8130" "-"
 echo "===================================================="
 read -p "Druk op ENTER om de stack te starten, of CTRL+C om te annuleren..."
 
@@ -325,6 +326,20 @@ services:
       - "com.centurylinklabs.watchtower.enable=true"
       - "com.centurylinklabs.dozzle.enable=true"
 
+  gptai:
+    container_name: gptai
+    image: ghcr.io/openai/gpt4all:latest
+    restart: unless-stopped
+    ports:
+      - "8130:5000"
+    environment:
+      - OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+    volumes:
+      - ./gptai:/data
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "com.centurylinklabs.dozzle.enable=true"
+
 volumes:
   portainer_data:
 EOF
@@ -350,6 +365,8 @@ for SERVICE in homeassistant zigbee2mqtt zwavejs2mqtt esphome influxdb grafana; 
         echo "$(date '+%Y-%m-%d %H:%M:%S') ✅ Backup gemaakt van $SERVICE"
     fi
 done
+# Hou alleen laatste 7 backups
+find "$STACK_DIR/backups/" -maxdepth 1 -type d -mtime +7 -exec rm -rf {} \;
 EOB
 
 chmod +x "$STACK_DIR/ha_backup.sh"
@@ -369,6 +386,7 @@ echo "Dozzle: 8126"
 echo "InfluxDB: 8127"
 echo "Grafana: 8128"
 echo "Z-Wave (zwavejs2mqtt): 8129"
+echo "GPT AI: 8130"
 echo "⚠️ Controleer wachtwoorden, USB sticks en backups in $STACK_DIR/backups/"
 echo "Log uit en weer in om Docker zonder sudo te gebruiken."
 echo "===================================================="
