@@ -1,0 +1,12 @@
+[Unit]
+Description=Home Assistant first boot setup
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/ha-setup/postinstall.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
