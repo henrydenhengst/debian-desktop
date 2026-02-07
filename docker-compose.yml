@@ -1,0 +1,88 @@
+version: "3.9"
+
+services:
+
+  homeassistant:
+    container_name: homeassistant
+    image: ghcr.io/home-assistant/home-assistant:stable
+    volumes:
+      - /opt/ha-setup/homeassistant/config:/config
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0  # Zigbee/Z-Wave stick
+
+  mqtt:
+    container_name: mqtt
+    image: eclipse-mosquitto:2.0
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - /opt/ha-setup/mosquitto/config:/mosquitto/config
+      - /opt/ha-setup/mosquitto/data:/mosquitto/data
+    restart: unless-stopped
+
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt:latest
+    volumes:
+      - /opt/ha-setup/zigbee2mqtt/data:/app/data
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - /opt/ha-setup/esphome/config:/config
+    ports:
+      - "6052:6052"
+    restart: unless-stopped
+
+  grafana:
+    container_name: grafana
+    image: grafana/grafana:latest
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - /opt/ha-setup/grafana/data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  influxdb:
+    container_name: influxdb
+    image: influxdb:2.6
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=admin
+      - DOCKER_INFLUXDB_INIT_ORG=home
+      - DOCKER_INFLUXDB_INIT_BUCKET=home
+    volumes:
+      - /opt/ha-setup/influxdb:/var/lib/influxdb2
+    ports:
+      - "8086:8086"
+    restart: unless-stopped
+
+  netdata:
+    container_name: netdata
+    image: netdata/netdata:latest
+    cap_add:
+      - SYS_PTRACE
+      - SYS_ADMIN
+    ports:
+      - "19999:19999"
+    restart: unless-stopped
+
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --cleanup --interval 300
+    restart: unless-stopped
