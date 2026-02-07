@@ -1,0 +1,1 @@
+sudo dd if=debian-12.5.0-amd64-netinst.iso of=/dev/sdX bs=4M status=progress conv=fsync
